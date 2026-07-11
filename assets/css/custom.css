@@ -1215,5 +1215,17 @@ body.bollu-search-open {
     fill: currentColor !important;
 }
 
+/* RTL Adjustments for Sub-Header Layout */
+.rtl .bollu-sub-header-container {
+    flex-direction: row-reverse !important;
+}
+
+/* Fix phone number rendering direction in RTL */
+.bollu-sub-contact a[href^="tel:"] {
+    direction: ltr !important;
+    display: inline-block !important;
+}
+
+
 
 

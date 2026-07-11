@@ -24,7 +24,7 @@
             </div>
             <!-- Right side: Contact Info -->
             <div class="bollu-sub-contact">
-                <a href="tel:+79938968078" class="contact-link">+7 (993) 896-80-78</a>
+                <a href="tel:+9647709588489" class="contact-link">+964 770 958 8489</a>
                 <span class="divider">|</span>
                 <a href="mailto:info@kizanelite.com" class="contact-link">info@kizanelite.com</a>
             </div>

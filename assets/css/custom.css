@@ -14,28 +14,28 @@
     --bollu-border: rgba(255, 255, 255, 0.08);
 }
 
-/* Global Dark Theme overrides for the Homepage */
-body.home {
+/* Global Dark Theme overrides */
+body {
     background-color: var(--bollu-black) !important;
     color: var(--bollu-white) !important;
     font-family: 'Inter', 'Tajawal', sans-serif;
     overflow-x: hidden;
 }
 
-body.home #page {
+body #page {
     background-color: var(--bollu-black) !important;
 }
 
-body.home #content .ast-container {
+body #content .ast-container {
     display: block !important;
 }
 
-body.home h1, 
-body.home h2, 
-body.home h3, 
-body.home h4, 
-body.home h5, 
-body.home h6 {
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
     color: var(--bollu-white) !important;
     font-family: 'Outfit', 'Tajawal', sans-serif;
     font-weight: 500;
@@ -43,8 +43,8 @@ body.home h6 {
 }
 
 /* Header Overrides */
-body.home .site-header,
-body.home .main-header-bar {
+body .site-header,
+body .main-header-bar {
     background-color: rgba(17, 17, 17, 0.95) !important;
     border-bottom: 1px solid var(--bollu-border) !important;
     position: sticky;
@@ -52,8 +52,8 @@ body.home .main-header-bar {
     z-index: 999;
 }
 
-body.home .main-header-menu a,
-body.home .ast-menu-toggle {
+body .main-header-menu a,
+body .ast-menu-toggle {
     color: var(--bollu-white) !important;
     font-family: 'Outfit', 'Tajawal', sans-serif;
     text-transform: uppercase;
@@ -62,7 +62,7 @@ body.home .ast-menu-toggle {
     transition: color 0.3s ease;
 }
 
-body.home .main-header-menu a:hover {
+body .main-header-menu a:hover {
     color: var(--bollu-gold) !important;
 }
 
@@ -464,18 +464,18 @@ body.home .main-header-menu a:hover {
 }
 
 /* Footer Dark Mode Styles */
-body.home .site-footer {
+body .site-footer {
     background-color: var(--bollu-black) !important;
     border-top: 1px solid var(--bollu-border) !important;
     color: var(--bollu-gray) !important;
 }
 
-body.home .site-footer a {
+body .site-footer a {
     color: var(--bollu-light-gray) !important;
     transition: color 0.3s ease;
 }
 
-body.home .site-footer a:hover {
+body .site-footer a:hover {
     color: var(--bollu-gold) !important;
 }
 
@@ -1232,6 +1232,812 @@ body.bollu-search-open {
     direction: ltr !important;
     display: inline-block !important;
 }
+
+/* ==========================================================================
+   6. WooCommerce General & Cart Page Styling
+   ========================================================================== */
+
+/* Page Headers for WooCommerce Pages */
+.woocommerce-page .entry-title,
+.woocommerce-page .page-title,
+.woocommerce-cart .entry-title,
+.woocommerce-cart .page-title {
+    color: var(--bollu-white) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 40px !important;
+    text-align: center !important;
+}
+
+/* Redesign WooCommerce product lists (e.g. "New in store" block) to match Bollu style */
+.woocommerce ul.products,
+.woocommerce-page ul.products {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 30px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 40px auto !important;
+}
+
+/* WooCommerce loop product item override */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    background-color: var(--bollu-card-bg) !important;
+    border: 1px solid var(--bollu-border) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    padding: 25px !important;
+    margin: 0 !important;
+    position: relative !important;
+    border-radius: 2px !important;
+    float: none !important; /* Clear floats */
+    width: auto !important; /* Overrides default percentage widths */
+}
+
+.woocommerce ul.products li.product:hover,
+.woocommerce-page ul.products li.product:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(186, 161, 112, 0.3) !important;
+}
+
+/* WooCommerce sale badge (remove blue circle, make it gold) */
+.woocommerce span.onsale,
+.woocommerce-page span.onsale,
+.woocommerce ul.products li.product .onsale,
+.woocommerce-page ul.products li.product .onsale {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 5px 12px !important;
+    letter-spacing: 0.1em !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    min-width: auto !important;
+    line-height: 1.5 !important;
+    z-index: 2 !important;
+}
+
+/* Link wrapper & Image */
+.woocommerce ul.products li.product a.woocommerce-LoopProduct-link,
+.woocommerce-page ul.products li.product a.woocommerce-LoopProduct-link {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    text-decoration: none !important;
+}
+
+.woocommerce ul.products li.product a img,
+.woocommerce-page ul.products li.product a img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+    margin: 0 0 15px 0 !important;
+    border-radius: 2px !important;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    background-color: var(--bollu-dark) !important;
+}
+
+.woocommerce ul.products li.product:hover img,
+.woocommerce-page ul.products li.product:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Product Titles */
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce-page ul.products li.product .woocommerce-loop-product__title {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 18px !important;
+    color: var(--bollu-white) !important;
+    margin: 10px 0 !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+
+/* Prices */
+.woocommerce ul.products li.product .price,
+.woocommerce-page ul.products li.product .price {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--bollu-white) !important;
+    margin-bottom: 20px !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.woocommerce ul.products li.product .price del,
+.woocommerce-page ul.products li.product .price del,
+.woocommerce ul.products li.product .price del *,
+.woocommerce-page ul.products li.product .price del * {
+    color: var(--bollu-gray) !important;
+    text-decoration: line-through !important;
+    font-size: 14px !important;
+}
+
+.woocommerce ul.products li.product .price ins,
+.woocommerce-page ul.products li.product .price ins,
+.woocommerce ul.products li.product .price ins *,
+.woocommerce-page ul.products li.product .price ins * {
+    color: var(--bollu-white) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+/* Add to cart / select options button override */
+.woocommerce ul.products li.product .button,
+.woocommerce-page ul.products li.product .button,
+.woocommerce ul.products li.product .add_to_cart_button,
+.woocommerce-page ul.products li.product .add_to_cart_button {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    border: 1px solid var(--bollu-gold) !important;
+    background-color: transparent !important;
+    color: var(--bollu-gold) !important;
+    padding: 12px 0 !important;
+    text-transform: uppercase !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.15em !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+    margin-top: auto !important;
+}
+
+.woocommerce ul.products li.product .button:hover,
+.woocommerce-page ul.products li.product .button:hover {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border-color: var(--bollu-gold) !important;
+}
+
+/* Empty Cart Page Styling */
+.woocommerce-cart .cart-empty,
+.woocommerce-cart .wc-empty-cart-message,
+.woocommerce-cart .woocommerce-info {
+    color: var(--bollu-light-gray) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 20px 0 !important;
+}
+
+.woocommerce-cart .woocommerce-info::before {
+    display: none !important; /* Hide default Astra alert icon */
+}
+
+/* Force empty cart sad face icon / images to be light/gold in dark mode */
+.woocommerce-cart img[src*="empty"],
+.woocommerce-cart svg,
+.woocommerce-cart .wc-block-cart__empty-cart__image,
+.woocommerce-cart .wc-empty-cart-message svg,
+.woocommerce-cart .wc-block-components-notice-banner__content svg {
+    filter: brightness(0) invert(1) !important; /* Converts black/dark icon to white */
+    margin: 0 auto 30px auto !important;
+    display: block !important;
+}
+
+/* Return to shop button stylings (luxury gold button) */
+.woocommerce-cart .return-to-shop,
+.woocommerce-cart .return-to-shop a.button {
+    text-align: center !important;
+    margin-top: 20px !important;
+}
+
+.woocommerce-cart .return-to-shop a.button,
+.woocommerce-cart a.wc-backward,
+.woocommerce-cart .button.wc-backward {
+    display: inline-block !important;
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    padding: 14px 36px !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.15em !important;
+    border-radius: 2px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(186, 161, 112, 0.25) !important;
+    border: none !important;
+}
+
+.woocommerce-cart .return-to-shop a.button:hover,
+.woocommerce-cart a.wc-backward:hover,
+.woocommerce-cart .button.wc-backward:hover {
+    background-color: var(--bollu-gold-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(186, 161, 112, 0.4) !important;
+}
+
+/* WooCommerce Cart Table & Checkout Elements (when items are added) */
+.woocommerce-cart table.shop_table,
+.woocommerce-cart table.shop_table_responsive {
+    background-color: var(--bollu-card-bg) !important;
+    border: 1px solid var(--bollu-border) !important;
+    border-radius: 2px !important;
+    color: var(--bollu-white) !important;
+}
+
+.woocommerce-cart table.shop_table th {
+    background-color: var(--bollu-dark) !important;
+    color: var(--bollu-gold) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid var(--bollu-border) !important;
+    padding: 15px !important;
+}
+
+.woocommerce-cart table.shop_table td {
+    border-bottom: 1px solid var(--bollu-border) !important;
+    padding: 15px !important;
+    color: var(--bollu-light-gray) !important;
+}
+
+.woocommerce-cart table.shop_table td a {
+    color: var(--bollu-white) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.woocommerce-cart table.shop_table td a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Coupon/Update Actions inputs & buttons */
+.woocommerce-cart .actions input.input-text {
+    background-color: var(--bollu-dark) !important;
+    border: 1px solid var(--bollu-border) !important;
+    color: var(--bollu-white) !important;
+    padding: 10px 15px !important;
+    border-radius: 2px !important;
+}
+
+.woocommerce-cart .actions .button {
+    background-color: transparent !important;
+    color: var(--bollu-gold) !important;
+    border: 1px solid var(--bollu-gold) !important;
+    text-transform: uppercase !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    padding: 10px 20px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.1em !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce-cart .actions .button:hover {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+}
+
+/* Cart Totals */
+.woocommerce-cart .cart-collaterals {
+    background-color: var(--bollu-card-bg) !important;
+    border: 1px solid var(--bollu-border) !important;
+    border-radius: 2px !important;
+    padding: 30px !important;
+    margin-top: 40px !important;
+}
+
+.woocommerce-cart .cart-collaterals h2 {
+    color: var(--bollu-white) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 20px !important;
+    border-bottom: 1px solid var(--bollu-border) !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.woocommerce-cart .cart-collaterals .shop_table td,
+.woocommerce-cart .cart-collaterals .shop_table th {
+    background: transparent !important;
+    border-bottom: 1px solid var(--bollu-border) !important;
+}
+
+/* Checkout Button */
+.woocommerce-cart .checkout-button {
+    display: block !important;
+    width: 100% !important;
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    text-align: center !important;
+    padding: 16px 0 !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.15em !important;
+    border-radius: 2px !important;
+    box-shadow: 0 4px 15px rgba(186, 161, 112, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce-cart .checkout-button:hover {
+    background-color: var(--bollu-gold-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(186, 161, 112, 0.4) !important;
+}
+
+/* ==========================================================================
+   7. WooCommerce Gutenberg Blocks Styling Overrides (Luxury Bollu Style)
+   ========================================================================== */
+
+/* Product Grid Item Wrapper */
+.wc-block-grid__product,
+.wc-block-product-template li.product,
+.wc-block-layout li.wc-block-grid__product,
+.wp-block-post-template li.product {
+    background-color: var(--bollu-card-bg) !important;
+    border: 1px solid var(--bollu-border) !important;
+    padding: 25px !important;
+    border-radius: 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    position: relative !important;
+}
+
+.wc-block-grid__product:hover,
+.wc-block-product-template li.product:hover,
+.wp-block-post-template li.product:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(186, 161, 112, 0.3) !important;
+}
+
+/* Image styling inside blocks */
+.wc-block-grid__product-image,
+.wc-block-grid__product-image a,
+.wc-block-grid__product-image img,
+.wc-block-components-product-image,
+.wc-block-components-product-image img,
+.wp-block-woocommerce-product-image {
+    border-radius: 2px !important;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    background-color: var(--bollu-dark) !important;
+    overflow: hidden !important;
+}
+
+.wc-block-grid__product:hover .wc-block-grid__product-image img,
+.wc-block-product-template li.product:hover img,
+.wp-block-post-template li.product:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Product Titles (force white/gold and Outfit font) */
+.wc-block-grid__product-title,
+.wc-block-components-product-title,
+.wc-block-components-product-name,
+.wc-block-grid__product-title a,
+.wc-block-components-product-title a,
+.wc-block-components-product-name a,
+.wp-block-woocommerce-product-title,
+.wp-block-woocommerce-product-title a {
+    color: var(--bollu-white) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    transition: color 0.3s ease !important;
+}
+
+.wc-block-grid__product-title a:hover,
+.wc-block-components-product-title a:hover,
+.wc-block-components-product-name a:hover,
+.wp-block-woocommerce-product-title a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Product Prices */
+.wc-block-grid__product-price,
+.wc-block-components-product-price,
+.wc-block-components-product-price *,
+.wp-block-woocommerce-product-price,
+.wp-block-woocommerce-product-price * {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 16px !important;
+    color: var(--bollu-white) !important;
+    margin-bottom: 20px !important;
+    margin-top: auto !important;
+}
+
+.wc-block-grid__product-price del,
+.wc-block-components-product-price del,
+.wc-block-grid__product-price del *,
+.wc-block-components-product-price del *,
+.wp-block-woocommerce-product-price del,
+.wp-block-woocommerce-product-price del * {
+    color: var(--bollu-gray) !important;
+    text-decoration: line-through !important;
+    font-size: 14px !important;
+}
+
+.wc-block-grid__product-price ins,
+.wc-block-components-product-price ins,
+.wc-block-grid__product-price ins *,
+.wc-block-components-product-price ins *,
+.wp-block-woocommerce-product-price ins,
+.wp-block-woocommerce-product-price ins * {
+    color: var(--bollu-white) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+/* Product Add to Cart Buttons inside Gutenberg blocks */
+.wc-block-grid__product-add-to-cart,
+.wc-block-components-product-button,
+.wc-block-grid__product-add-to-cart a,
+.wc-block-components-product-button a,
+.wc-block-components-product-button button,
+.wc-block-components-product-button__button,
+.wc-block-components-button,
+.wp-block-button__link,
+.wp-block-woocommerce-product-button a {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: 1px solid var(--bollu-gold) !important;
+    color: var(--bollu-gold) !important;
+    padding: 12px 24px !important;
+    text-transform: uppercase !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.15em !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+    display: block !important;
+    text-align: center !important;
+    margin-top: auto !important;
+    box-shadow: none !important;
+}
+
+.wc-block-grid__product-add-to-cart a:hover,
+.wc-block-components-product-button a:hover,
+.wc-block-components-product-button button:hover,
+.wc-block-components-product-button__button:hover,
+.wc-block-components-button:hover,
+.wp-block-button__link:hover,
+.wp-block-woocommerce-product-button a:hover {
+    background-color: var(--bollu-gold) !important;
+    background: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border-color: var(--bollu-gold) !important;
+}
+
+/* Circle Sale Badge for Gutenberg and Classic Loops */
+.wc-block-grid__product-onsale,
+.wc-block-components-sale-badge,
+.woocommerce span.onsale,
+.woocommerce-page span.onsale,
+.woocommerce ul.products li.product .onsale,
+.woocommerce-page ul.products li.product .onsale,
+.wp-block-woocommerce-product-image .onsale {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    min-width: auto !important;
+    z-index: 9 !important;
+}
+
+/* Align Gutenberg blocks grid items correctly */
+.wc-block-grid__products {
+    margin: 40px auto !important;
+    padding: 0 !important;
+    gap: 30px !important;
+}
+
+/* ==========================================================================
+   8. WooCommerce Single Product Page Styling (Luxury Bollu Style)
+   ========================================================================== */
+
+/* Product title */
+.single-product div.product .product_title {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    color: var(--bollu-white) !important;
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+/* Product price */
+.single-product div.product p.price,
+.single-product div.product .price,
+.single-product div.product .price * {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 24px !important;
+    color: var(--bollu-gold) !important;
+    margin-bottom: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.single-product div.product p.price del,
+.single-product div.product p.price del *,
+.single-product div.product .price del,
+.single-product div.product .price del * {
+    color: var(--bollu-gray) !important;
+    text-decoration: line-through !important;
+    font-size: 18px !important;
+}
+
+.single-product div.product p.price ins,
+.single-product div.product p.price ins *,
+.single-product div.product .price ins,
+.single-product div.product .price ins * {
+    color: var(--bollu-gold) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+/* Add to cart quantity input */
+.single-product div.product .quantity input.qty {
+    background-color: var(--bollu-dark) !important;
+    border: 1px solid var(--bollu-border) !important;
+    color: var(--bollu-white) !important;
+    border-radius: 2px !important;
+    height: 48px !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    margin-left: 10px !important; /* Spacing for LTR */
+    margin-right: 10px !important; /* Spacing for RTL */
+}
+
+/* Add to cart button */
+.single-product div.product button.single_add_to_cart_button,
+.single-product div.product button.button.alt,
+.single-product div.product .single_add_to_cart_button {
+    background-color: var(--bollu-gold) !important;
+    background: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border: none !important;
+    height: 48px !important;
+    padding: 0 40px !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    letter-spacing: 0.15em !important;
+    border-radius: 2px !important;
+    box-shadow: 0 4px 15px rgba(186, 161, 112, 0.25) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.single-product div.product button.single_add_to_cart_button:hover,
+.single-product div.product button.button.alt:hover {
+    background-color: var(--bollu-gold-hover) !important;
+    background: var(--bollu-gold-hover) !important;
+    color: var(--bollu-black) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(186, 161, 112, 0.4) !important;
+}
+
+/* Breadcrumbs (Astra breadcrumbs or WooCommerce breadcrumbs) */
+.woocommerce-breadcrumb,
+.woocommerce-breadcrumb a,
+.ast-breadcrumbs,
+.ast-breadcrumbs a {
+    color: var(--bollu-gray) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+}
+
+.woocommerce-breadcrumb a:hover,
+.ast-breadcrumbs a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Product Meta (SKU, Categories, Tags) */
+.single-product div.product .product_meta,
+.single-product div.product .product_meta span,
+.single-product div.product .product_meta strong {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    color: var(--bollu-gray) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.single-product div.product .product_meta a {
+    color: var(--bollu-light-gray) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.single-product div.product .product_meta a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Image zoom/magnify button */
+.single-product .woocommerce-product-gallery__trigger {
+    background-color: var(--bollu-dark) !important;
+    color: var(--bollu-gold) !important;
+    border: 1px solid var(--bollu-border) !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    top: 20px !important;
+    left: 20px !important;
+    right: auto !important;
+}
+
+.single-product .woocommerce-product-gallery__trigger:hover {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+}
+
+/* Reviews and Tabs styling */
+.single-product .woocommerce-tabs {
+    border-top: 1px solid var(--bollu-border) !important;
+    margin-top: 50px !important;
+    padding-top: 40px !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs {
+    display: flex !important;
+    list-style: none !important;
+    margin: 0 0 30px 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid var(--bollu-border) !important;
+    gap: 30px !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs li {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    border-bottom: 2px solid transparent !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs li a {
+    color: var(--bollu-gray) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs li.active {
+    border-bottom: 2px solid var(--bollu-gold) !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs li.active a {
+    color: var(--bollu-white) !important;
+}
+
+.single-product .woocommerce-tabs ul.tabs li a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Tabs content */
+.single-product .woocommerce-Tabs-panel {
+    color: var(--bollu-light-gray) !important;
+    font-family: 'Inter', 'Tajawal', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+.single-product .woocommerce-Tabs-panel h2 {
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    color: var(--bollu-white) !important;
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Reviews and Comments form */
+.single-product #reviews #comments ol.commentlist li {
+    background-color: var(--bollu-card-bg) !important;
+    border: 1px solid var(--bollu-border) !important;
+    border-radius: 2px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.single-product #reviews #comments ol.commentlist li .comment-text {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.single-product #reviews #comments ol.commentlist li .meta {
+    color: var(--bollu-gold) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+}
+
+.single-product #reviews #comments ol.commentlist li .description {
+    color: var(--bollu-white) !important;
+}
+
+/* Stars rating */
+.single-product .stars a {
+    color: var(--bollu-gold) !important;
+}
+
+.single-product .comment-form input[type="text"],
+.single-product .comment-form input[type="email"],
+.single-product .comment-form textarea {
+    background-color: var(--bollu-dark) !important;
+    border: 1px solid var(--bollu-border) !important;
+    color: var(--bollu-white) !important;
+    border-radius: 2px !important;
+    padding: 10px 15px !important;
+}
+
+.single-product .comment-form input[type="submit"] {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    border-radius: 2px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.single-product .comment-form input[type="submit"]:hover {
+    background-color: var(--bollu-gold-hover) !important;
+}
+
+
 
 
 

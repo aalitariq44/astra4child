@@ -1154,4 +1154,66 @@ body.bollu-search-open {
     }
 }
 
+/* ==========================================================================
+   5. Custom Footer (Bollu.ru / Luxury Aesthetic)
+   ========================================================================== */
+
+/* Dark Mode Footer styles applied globally to all pages */
+.site-footer,
+.site-footer .site-below-footer-wrap,
+.site-footer .site-primary-footer-wrap,
+.site-footer .site-above-footer-wrap,
+.site-footer .site-footer-inner-wrap-layout-1,
+.site-footer [class*="-footer-wrap"],
+.site-footer .ast-footer-overlay {
+    background-color: var(--bollu-black) !important;
+    background: var(--bollu-black) !important;
+    border-top: 1px solid var(--bollu-border) !important;
+    color: var(--bollu-gray) !important;
+    padding: 30px 0 !important;
+}
+
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.site-footer div,
+.site-footer .ast-footer-copyright,
+.site-footer .ast-footer-copyright * {
+    color: var(--bollu-gray) !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.05em !important;
+}
+
+.site-footer a {
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.site-footer a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Customize Astra scroll to top button to fit the black/gold luxury theme */
+#ast-scroll-top {
+    background-color: var(--bollu-dark) !important;
+    color: var(--bollu-gold) !important;
+    border: 1px solid var(--bollu-border) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+#ast-scroll-top:hover {
+    background-color: var(--bollu-gold) !important;
+    color: var(--bollu-black) !important;
+    border-color: var(--bollu-gold) !important;
+    transform: translateY(-3px) !important;
+}
+
+#ast-scroll-top .ast-icon svg {
+    fill: currentColor !important;
+}
+
+
 

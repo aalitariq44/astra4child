@@ -20,3 +20,7 @@ require_once get_stylesheet_directory() . '/inc/header-functions.php';
 
 // 3. WooCommerce custom helpers and categories queries
 require_once get_stylesheet_directory() . '/inc/woocommerce.php';
+
+// 4. Custom footer functions and copyright text override
+require_once get_stylesheet_directory() . '/inc/footer-functions.php';
+

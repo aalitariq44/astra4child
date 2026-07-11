@@ -1,0 +1,1030 @@
+/* ==========================================================================
+   Luxury Theme Custom CSS (Bollu.ru Style)
+   ========================================================================== */
+
+:root {
+    --bollu-black: #111111;
+    --bollu-dark: #181818;
+    --bollu-card-bg: #1e1e1e;
+    --bollu-gold: #BAA170;
+    --bollu-gold-hover: #d2bd93;
+    --bollu-white: #ffffff;
+    --bollu-gray: #8e8e93;
+    --bollu-light-gray: #aeaeb2;
+    --bollu-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Global Dark Theme overrides for the Homepage */
+body.home {
+    background-color: var(--bollu-black) !important;
+    color: var(--bollu-white) !important;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+body.home #page {
+    background-color: var(--bollu-black) !important;
+}
+
+body.home h1, 
+body.home h2, 
+body.home h3, 
+body.home h4, 
+body.home h5, 
+body.home h6 {
+    color: var(--bollu-white) !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+/* Header Overrides */
+body.home .site-header,
+body.home .main-header-bar {
+    background-color: rgba(17, 17, 17, 0.95) !important;
+    border-bottom: 1px solid var(--bollu-border) !important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+body.home .main-header-menu a,
+body.home .ast-menu-toggle {
+    color: var(--bollu-white) !important;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+body.home .main-header-menu a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Hero Section */
+.bollu-hero {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bollu-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(17, 17, 17, 0.3) 0%, rgba(17, 17, 17, 0.8) 100%);
+    z-index: 1;
+}
+
+.bollu-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.bollu-hero-tagline {
+    font-family: 'Outfit', sans-serif;
+    color: var(--bollu-gold);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+    display: block;
+    animation: fadeInUp 1s ease both;
+}
+
+.bollu-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    font-weight: 300;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease both 0.2s;
+}
+
+.bollu-hero p {
+    font-size: 18px;
+    color: var(--bollu-light-gray);
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease both 0.4s;
+}
+
+.bollu-btn-gold {
+    display: inline-block;
+    background-color: var(--bollu-gold);
+    color: var(--bollu-black) !important;
+    padding: 14px 36px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(186, 161, 112, 0.25);
+    animation: fadeInUp 1s ease both 0.6s;
+}
+
+.bollu-btn-gold:hover {
+    background-color: var(--bollu-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(186, 161, 112, 0.4);
+}
+
+/* Sections General */
+.bollu-section {
+    padding: 100px 0;
+    background-color: var(--bollu-black);
+}
+
+.bollu-section.alt-bg {
+    background-color: var(--bollu-dark);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: var(--bollu-gold);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--bollu-gold);
+    margin: 20px auto 0 auto;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-card {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    background-color: var(--bollu-dark);
+    border: 1px solid var(--bollu-border);
+}
+
+.category-card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.2) 60%, rgba(17, 17, 17, 0) 100%);
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.category-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.category-card-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--bollu-white);
+}
+
+.category-card-link {
+    font-family: 'Outfit', sans-serif;
+    color: var(--bollu-gold);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.category-card-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-card-image {
+    transform: scale(1.06);
+}
+
+.category-card:hover::before {
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.95) 0%, rgba(17, 17, 17, 0.4) 100%);
+}
+
+.category-card:hover .category-card-link {
+    color: var(--bollu-white);
+}
+
+.category-card:hover .category-card-link::after {
+    transform: translateX(5px);
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--bollu-card-bg);
+    border: 1px solid var(--bollu-border);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card-image-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+    background-color: var(--bollu-dark);
+}
+
+.product-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-badge-sale {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--bollu-gold);
+    color: var(--bollu-black);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    letter-spacing: 0.1em;
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.product-card-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card-category {
+    font-family: 'Outfit', sans-serif;
+    color: var(--bollu-gold);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.product-card-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--bollu-white);
+}
+
+.product-card-title a {
+    color: var(--bollu-white) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product-card-title a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+.product-card-price {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-regular {
+    color: var(--bollu-gray);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.price-sale {
+    color: var(--bollu-white);
+    font-weight: 500;
+}
+
+.product-card-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--bollu-gold);
+    color: var(--bollu-gold) !important;
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.product-card-btn:hover {
+    background-color: var(--bollu-gold);
+    color: var(--bollu-black) !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(186, 161, 112, 0.3);
+}
+
+.product-card:hover .product-card-image {
+    transform: scale(1.05);
+}
+
+/* Split Showcase Section */
+.bollu-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 500px;
+}
+
+.showcase-half {
+    flex: 1 1 500px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.showcase-content {
+    background-color: var(--bollu-dark);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-left: 1px solid var(--bollu-border);
+}
+
+.showcase-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.showcase-content p {
+    color: var(--bollu-light-gray);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+/* Footer Dark Mode Styles */
+body.home .site-footer {
+    background-color: var(--bollu-black) !important;
+    border-top: 1px solid var(--bollu-border) !important;
+    color: var(--bollu-gray) !important;
+}
+
+body.home .site-footer a {
+    color: var(--bollu-light-gray) !important;
+    transition: color 0.3s ease;
+}
+
+body.home .site-footer a:hover {
+    color: var(--bollu-gold) !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .bollu-hero h1 {
+        font-size: 2.2rem;
+    }
+    .showcase-content {
+        padding: 40px;
+    }
+    .showcase-half {
+        height: auto;
+    }
+}
+
+/* ==========================================================================
+   Certificate of Origin Banner Styles
+   ========================================================================== */
+
+.bollu-top-certificate-banner {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.bollu-top-bar-dark {
+    background-color: #0c0c0c;
+    color: #e5e5e5;
+    padding: 8px 20px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.bollu-toggle-btn {
+    background: none !important;
+    border: none !important;
+    color: inherit !important;
+    font: inherit !important;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    outline: none !important;
+    gap: 8px;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.bollu-toggle-btn:focus,
+.bollu-toggle-btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.bollu-toggle-icon {
+    font-size: 10px;
+    color: var(--bollu-gold);
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: rotate(0deg);
+}
+
+.bollu-top-certificate-banner.is-closed .bollu-toggle-icon {
+    transform: rotate(-180deg);
+}
+
+.bollu-certificate-main {
+    background-color: #f7f6f5; /* Elegant warm off-white */
+    border-bottom: 1.5px solid #eae8e5;
+    padding: 30px 40px;
+    color: #2c2c2c;
+    direction: rtl; /* Force RTL layout for the entire certificate container */
+}
+
+.bollu-cert-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.bollu-cert-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 0 1 auto;
+    text-align: right;
+}
+
+.bollu-cert-shield-gold {
+    width: 58px;
+    height: 64px;
+    border: 2px solid var(--bollu-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 4px 50% 50% / 4px 4px 40% 40%;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+
+.gold-b {
+    color: var(--bollu-gold);
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.bollu-cert-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    color: #8e8e93;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+}
+
+.cert-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: #1c1c1e !important;
+    margin: 4px 0 2px 0 !important;
+    letter-spacing: -0.01em;
+}
+
+.cert-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    color: var(--bollu-gold);
+    letter-spacing: 0.25em;
+    font-weight: 700;
+}
+
+/* Features Columns Alignment */
+.bollu-cert-features-section {
+    display: flex;
+    gap: 40px;
+    flex: 1 1 auto;
+    justify-content: flex-start; /* Aligns to the right side because of RTL */
+}
+
+.cert-feature-col {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 280px;
+    text-align: right;
+}
+
+.cert-feature-icon-wrap {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--bollu-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+    background-color: rgba(186, 161, 112, 0.05);
+}
+
+.gold-check {
+    color: var(--bollu-gold);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.cert-feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cert-feature-text h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1c1c1e !important; /* Force readable charcoal black color */
+    letter-spacing: 0.08em;
+    margin: 0 !important;
+    text-transform: uppercase;
+}
+
+.cert-feature-text p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #55555a !important; /* Readable description text */
+    margin: 0 !important;
+    font-weight: 400;
+}
+
+/* Responsive banner overrides */
+@media (max-width: 1024px) {
+    .bollu-cert-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .bollu-cert-logo-section {
+        justify-content: center;
+        width: 100%;
+    }
+    .bollu-cert-features-section {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 25px;
+    }
+    .cert-feature-col {
+        max-width: 300px;
+    }
+}
+
+/* ==========================================================================
+   Custom Logo & Branding Styles
+   ========================================================================== */
+
+.custom-logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none !important;
+}
+
+.custom-logo {
+    max-height: 42px;
+    width: auto;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-logo-link:hover .custom-logo {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.custom-logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--bollu-white) !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.custom-logo-link:hover .custom-logo-text {
+    color: var(--bollu-gold) !important;
+}
+
+/* ==========================================================================
+   Custom Luxury Header (Bollu.ru Style)
+   ========================================================================== */
+
+/* Hide default Astra header containers completely */
+.ast-mobile-header-wrap,
+.ast-main-header-wrap,
+.main-header-bar,
+.site-header {
+    display: none !important;
+}
+
+/* Show our custom header */
+.custom-bollu-header {
+    display: block !important;
+    width: 100%;
+    background-color: var(--bollu-black);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* 1. Sub-Header (Top Bar) */
+.bollu-sub-header {
+    background-color: #080808;
+    border-bottom: 1px solid var(--bollu-border);
+    padding: 10px 40px;
+}
+
+.bollu-sub-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sub-Menu on the Left */
+.bollu-sub-menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+.bollu-sub-menu-list li {
+    margin: 0;
+}
+
+.bollu-sub-menu-list li a {
+    color: var(--bollu-light-gray);
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bollu-sub-menu-list li a:hover {
+    color: var(--bollu-gold);
+}
+
+/* Contact Info on the Right */
+.bollu-sub-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--bollu-gray);
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+}
+
+.bollu-sub-contact .contact-link {
+    color: var(--bollu-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bollu-sub-contact .contact-link:hover {
+    color: var(--bollu-white);
+}
+
+.bollu-sub-contact .divider {
+    color: var(--bollu-border);
+}
+
+/* 2. Main Header Bar */
+.bollu-main-header {
+    background-color: var(--bollu-black);
+    padding: 18px 40px;
+    border-bottom: 1px solid var(--bollu-border);
+}
+
+.bollu-main-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side: Hamburger + Logo */
+.bollu-header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Hamburger Button */
+.bollu-hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hamburger-line {
+    width: 22px;
+    height: 1.5px;
+    background-color: var(--bollu-white);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bollu-hamburger-btn:hover .hamburger-line {
+    background-color: var(--bollu-gold);
+}
+
+.bollu-header-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Right side: Minimalist Icons */
+.bollu-header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bollu-search-trigger {
+    color: var(--bollu-white);
+    transition: color 0.3s ease;
+}
+
+.bollu-search-trigger:hover {
+    color: var(--bollu-gold);
+}
+
+/* 3. Slide-out Drawer Panel */
+.bollu-drawer-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.bollu-drawer-menu.is-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bollu-drawer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.bollu-drawer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    background-color: var(--bollu-dark);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, 0.6);
+    padding: 60px 40px;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+}
+
+.bollu-drawer-menu.is-active .bollu-drawer-content {
+    transform: translateX(0);
+}
+
+.bollu-drawer-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: var(--bollu-white);
+    font-size: 36px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none !important;
+    transition: color 0.3s ease;
+}
+
+.bollu-drawer-close:hover {
+    color: var(--bollu-gold);
+}
+
+.bollu-drawer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.bollu-drawer-nav {
+    flex-grow: 1;
+}
+
+.bollu-drawer-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bollu-drawer-menu-list li {
+    margin: 0;
+}
+
+.bollu-drawer-menu-list li a {
+    color: var(--bollu-white);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bollu-drawer-menu-list li a:hover {
+    color: var(--bollu-gold);
+}
+
+/* Adjust general padding-top for body content since custom header is sticky */
+body.home {
+    padding-top: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bollu-sub-header {
+        display: none !important; /* Hide thin sub-header on mobile */
+    }
+    .bollu-main-header {
+        padding: 15px 20px;
+    }
+    .bollu-drawer-content {
+        width: 100%;
+        max-width: 280px;
+        padding: 50px 30px;
+    }
+}

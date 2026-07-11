@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Luxury Shield -->
+  <path d="M60 15 L95 30 V65 C95 85 80 100 60 105 C40 100 25 85 25 65 V30 Z" fill="none" stroke="#BAA170" stroke-width="2.5" stroke-linejoin="round" />
+  <!-- Minimalist Monogram K -->
+  <path d="M50 42 V78 M50 60 L68 42 M52 58 L68 78" fill="none" stroke="#BAA170" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

@@ -1033,3 +1033,125 @@ body.home {
     }
 }
 
+/* ==========================================================================
+   4. Search Overlay (Bollu.ru Style)
+   ========================================================================== */
+body.bollu-search-open {
+    overflow: hidden !important;
+}
+
+.bollu-search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bollu-search-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.bollu-search-top-bar {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 60px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.bollu-search-overlay.is-active .bollu-search-top-bar {
+    transform: translateY(0);
+}
+
+.bollu-search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.bollu-search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1.5px solid #555555;
+    padding-bottom: 8px;
+}
+
+.bollu-search-icon {
+    color: #999999;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.bollu-search-input {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Outfit', 'Tajawal', sans-serif;
+    color: #111111;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.bollu-search-input::placeholder {
+    color: #999999;
+    font-weight: 300;
+}
+
+.bollu-search-close {
+    position: absolute;
+    right: 40px;
+    top: -20px;
+    background-color: #f0f0f0;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #777777;
+    transition: background-color 0.2s, color 0.2s;
+    padding: 0 !important;
+}
+
+.bollu-search-close svg {
+    display: block;
+}
+
+.bollu-search-close:hover {
+    background-color: #e2e2e2;
+    color: #111111;
+}
+
+/* Adjust position of close button for larger screens */
+@media (min-width: 768px) {
+    .bollu-search-close {
+        right: 60px;
+        top: -15px;
+    }
+}
+
+

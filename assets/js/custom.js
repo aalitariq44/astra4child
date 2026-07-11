@@ -62,6 +62,45 @@
             $('.bollu-drawer-menu').toggleClass('is-active');
         });
 
+        // Toggle Search Overlay
+        var $searchOverlay = $('#bolluSearchOverlay');
+        var $searchInput = $searchOverlay.find('.bollu-search-input');
+
+        $('.bollu-search-trigger').on('click', function(e) {
+            e.preventDefault();
+            $searchOverlay.addClass('is-active');
+            $('body').addClass('bollu-search-open');
+            setTimeout(function() {
+                $searchInput.focus();
+            }, 300); // Focus input after transition completes
+        });
+
+        // Close Search Overlay
+        $('.bollu-search-close').on('click', function(e) {
+            e.preventDefault();
+            closeSearchOverlay();
+        });
+
+        // Close on clicking outside the container (on the overlay background)
+        $searchOverlay.on('click', function(e) {
+            if ($(e.target).is($searchOverlay)) {
+                closeSearchOverlay();
+            }
+        });
+
+        // Close on Escape key press
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape' && $searchOverlay.hasClass('is-active')) {
+                closeSearchOverlay();
+            }
+        });
+
+        function closeSearchOverlay() {
+            $searchOverlay.removeClass('is-active');
+            $('body').removeClass('bollu-search-open');
+            $searchInput.val(''); // Optional: clear input on close
+        }
+
         // Run check on load and scroll
         $(window).on('scroll resize', checkScroll);
         setTimeout(checkScroll, 100);

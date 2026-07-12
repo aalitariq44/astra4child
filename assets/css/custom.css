@@ -30,6 +30,10 @@ body #content .ast-container {
     display: block !important;
 }
 
+.site-content {
+    background-color: var(--bollu-white) !important;
+}
+
 body h1, 
 body h2, 
 body h3, 
@@ -740,7 +744,7 @@ body .site-footer a:hover {
     font-family: 'Outfit', 'Tajawal', sans-serif;
     font-size: 20px;
     font-weight: 500;
-    color: var(--bollu-white) !important;
+    color: var(--bollu-black) !important;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     transition: color 0.3s ease;
@@ -842,7 +846,7 @@ body .site-footer a:hover {
 
 /* 2. Main Header Bar */
 .bollu-main-header {
-    background-color: var(--bollu-black);
+    background-color: var(--bollu-white) !important;
     padding: 18px 40px;
     border-bottom: 1px solid var(--bollu-border);
 }
@@ -878,12 +882,12 @@ body .site-footer a:hover {
 .hamburger-line {
     width: 22px;
     height: 1.5px;
-    background-color: var(--bollu-white);
+    background-color: var(--bollu-black) !important;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .bollu-hamburger-btn:hover .hamburger-line {
-    background-color: var(--bollu-gold);
+    background-color: var(--bollu-gold) !important;
 }
 
 .bollu-header-logo {
@@ -899,12 +903,12 @@ body .site-footer a:hover {
 }
 
 .bollu-search-trigger {
-    color: var(--bollu-white);
+    color: var(--bollu-black) !important;
     transition: color 0.3s ease;
 }
 
 .bollu-search-trigger:hover {
-    color: var(--bollu-gold);
+    color: var(--bollu-gold) !important;
 }
 
 /* 3. Slide-out Drawer Panel */

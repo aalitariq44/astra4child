@@ -1459,6 +1459,14 @@ body.rtl .side-panel-menu-list .sub-menu .sub-menu {
     line-height: 1.5;
 }
 
+/* Fix phone number reversal in RTL */
+a[href^="tel:"],
+.side-panel-contact-row[href^="tel:"] span:last-child {
+    direction: ltr !important;
+    display: inline-block !important;
+    unicode-bidi: embed !important;
+}
+
 a.side-panel-contact-row:hover {
     color: var(--bollu-gold, #BAA170) !important;
 }

@@ -23,7 +23,7 @@ body {
 }
 
 body #page {
-    background-color: var(--bollu-black) !important;
+    background-color: var(--bollu-white) !important;
 }
 
 body #content .ast-container {
@@ -32,6 +32,8 @@ body #content .ast-container {
 
 .site-content {
     background-color: var(--bollu-white) !important;
+    border-top: none !important;
+    box-shadow: none !important;
 }
 
 body h1, 
@@ -48,12 +50,53 @@ body h6 {
 
 /* Header Overrides */
 body .site-header,
-body .main-header-bar {
+body .main-header-bar,
+body .main-header-bar-wrap,
+body .ast-primary-header-bar,
+body .ast-primary-header-bar-wrap,
+body .custom-bollu-header,
+body #masthead,
+body.ast-theme-transparent-header #masthead,
+body.ast-theme-transparent-header .site-header,
+body.ast-theme-transparent-header .main-header-bar,
+body.ast-theme-transparent-header .ast-primary-header-bar,
+body.ast-theme-transparent-header .main-header-bar-wrap,
+body.ast-theme-transparent-header .ast-primary-header-bar-wrap,
+body [class*="ast-"] .site-header,
+body [class*="ast-"] #masthead,
+body [class*="ast-"] .main-header-bar,
+body [class*="ast-"] .main-header-bar-wrap,
+body [class*="ast-"] .ast-primary-header-bar,
+body [class*="ast-"] .ast-primary-header-bar-wrap {
     background-color: rgba(17, 17, 17, 0.95) !important;
-    border-bottom: 1px solid var(--bollu-border) !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
     position: sticky;
     top: 0;
     z-index: 999;
+}
+
+/* Prevent any potential gaps or theme default borders on header container */
+#masthead,
+.site-header,
+.custom-bollu-header,
+.main-header-bar,
+.main-header-bar-wrap,
+.ast-main-header-wrap,
+.ast-primary-header-bar,
+.ast-primary-header-bar-wrap {
+    margin-bottom: 0 !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+#content,
+.site-content {
+    margin-top: 0 !important;
+    border-top: none !important;
+    box-shadow: none !important;
 }
 
 body .main-header-menu a,
@@ -196,7 +239,7 @@ body .main-header-menu a:hover {
 /* Categories Grid */
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 0 20px;
     max-width: 1400px;
@@ -205,10 +248,50 @@ body .main-header-menu a:hover {
 
 .category-card {
     position: relative;
-    height: 480px;
     overflow: hidden;
     background-color: var(--bollu-dark);
     border: 1px solid var(--bollu-border);
+}
+
+.category-card.card-rect {
+    grid-column: span 2;
+    height: 380px;
+}
+
+.category-card.card-square {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .category-card.card-rect {
+        grid-column: span 2;
+        height: 320px;
+    }
+    .category-card.card-square {
+        grid-column: span 1;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .category-card.card-rect {
+        grid-column: span 1;
+        height: 250px;
+    }
+    .category-card.card-square {
+        grid-column: span 1;
+        aspect-ratio: auto;
+        height: 250px;
+    }
 }
 
 .category-card-image {
@@ -775,12 +858,15 @@ body .site-footer a:hover {
     position: sticky;
     top: 0;
     z-index: 999;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 /* 1. Sub-Header (Top Bar) */
 .bollu-sub-header {
     background-color: #282828 !important;
-    border-bottom: 1px solid var(--bollu-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     padding: 10px 40px;
 }
 
@@ -849,7 +935,8 @@ body .site-footer a:hover {
 .bollu-main-header {
     background-color: var(--bollu-white) !important;
     padding: 18px 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid #f2f2f2 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02) !important;
 }
 
 .bollu-main-header-container {

@@ -156,11 +156,11 @@ body .main-header-menu a:hover {
 /* Sections General */
 .bollu-section {
     padding: 100px 0;
-    background-color: var(--bollu-black);
+    background-color: var(--bollu-white) !important;
 }
 
 .bollu-section.alt-bg {
-    background-color: var(--bollu-dark);
+    background-color: var(--bollu-white) !important;
 }
 
 .section-header {
@@ -169,7 +169,7 @@ body .main-header-menu a:hover {
 }
 
 .section-subtitle {
-    color: var(--bollu-gold);
+    color: var(--bollu-black) !important;
     font-size: 12px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -178,6 +178,7 @@ body .main-header-menu a:hover {
 }
 
 .section-title {
+    color: var(--bollu-black) !important;
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 20px;
@@ -188,7 +189,7 @@ body .main-header-menu a:hover {
     display: block;
     width: 60px;
     height: 1px;
-    background-color: var(--bollu-gold);
+    background-color: var(--bollu-black) !important;
     margin: 20px auto 0 auto;
 }
 
@@ -778,7 +779,7 @@ body .site-footer a:hover {
 
 /* 1. Sub-Header (Top Bar) */
 .bollu-sub-header {
-    background-color: #080808;
+    background-color: #282828 !important;
     border-bottom: 1px solid var(--bollu-border);
     padding: 10px 40px;
 }
@@ -824,31 +825,31 @@ body .site-footer a:hover {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: var(--bollu-gray);
+    color: var(--bollu-white) !important;
     font-family: 'Outfit', 'Tajawal', sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.05em;
 }
 
 .bollu-sub-contact .contact-link {
-    color: var(--bollu-gray);
+    color: var(--bollu-white) !important;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .bollu-sub-contact .contact-link:hover {
-    color: var(--bollu-white);
+    color: var(--bollu-gold) !important;
 }
 
 .bollu-sub-contact .divider {
-    color: var(--bollu-border);
+    color: var(--bollu-white) !important;
 }
 
 /* 2. Main Header Bar */
 .bollu-main-header {
     background-color: var(--bollu-white) !important;
     padding: 18px 40px;
-    border-bottom: 1px solid var(--bollu-border);
+    border-bottom: 1px solid #eaeaea !important;
 }
 
 .bollu-main-header-container {

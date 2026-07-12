@@ -1460,7 +1460,7 @@ body.rtl .side-panel-menu-list .sub-menu .sub-menu {
 }
 
 /* Fix phone number reversal in RTL */
-a[href^="tel:"],
+a[href^="tel:"]:not(.side-panel-contact-row),
 .side-panel-contact-row[href^="tel:"] span:last-child {
     direction: ltr !important;
     display: inline-block !important;

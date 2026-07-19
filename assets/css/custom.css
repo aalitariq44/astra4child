@@ -2608,7 +2608,7 @@ body.bollu-search-open {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: flex-start;
+    align-items: flex-end;
     direction: ltr !important;
     text-align: right !important;
 }

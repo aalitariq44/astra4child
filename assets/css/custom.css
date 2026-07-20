@@ -2033,17 +2033,17 @@ body.bollu-search-open {
     font-weight: 500 !important;
 }
 
-/* Form inputs and select boxes on Cart & Checkout pages */
-.woocommerce-cart .site-content input[type="text"],
-.woocommerce-checkout .site-content input[type="text"],
-.woocommerce-cart .site-content input[type="email"],
-.woocommerce-checkout .site-content input[type="email"],
-.woocommerce-cart .site-content input[type="tel"],
-.woocommerce-checkout .site-content input[type="tel"],
-.woocommerce-cart .site-content select,
-.woocommerce-checkout .site-content select,
-.woocommerce-cart .site-content textarea,
-.woocommerce-checkout .site-content textarea,
+/* Form inputs and select boxes on Cart & Checkout pages - Scoped to classic wrappers to avoid breaking Gutenberg blocks */
+.woocommerce-cart .site-content .form-row input[type="text"],
+.woocommerce-checkout .site-content .form-row input[type="text"],
+.woocommerce-cart .site-content .form-row input[type="email"],
+.woocommerce-checkout .site-content .form-row input[type="email"],
+.woocommerce-cart .site-content .form-row input[type="tel"],
+.woocommerce-checkout .site-content .form-row input[type="tel"],
+.woocommerce-cart .site-content .form-row select,
+.woocommerce-checkout .site-content .form-row select,
+.woocommerce-cart .site-content .form-row textarea,
+.woocommerce-checkout .site-content .form-row textarea,
 .woocommerce-cart .site-content .select2-container--default .select2-selection--single,
 .woocommerce-checkout .site-content .select2-container--default .select2-selection--single {
     background-color: #ffffff !important;
@@ -2054,13 +2054,46 @@ body.bollu-search-open {
     font-family: 'Inter', 'Tajawal', sans-serif !important;
 }
 
-.woocommerce-cart .site-content input:focus,
-.woocommerce-checkout .site-content input:focus,
-.woocommerce-cart .site-content select:focus,
-.woocommerce-checkout .site-content select:focus,
-.woocommerce-cart .site-content textarea:focus {
+.woocommerce-cart .site-content .form-row input:focus,
+.woocommerce-checkout .site-content .form-row input:focus,
+.woocommerce-cart .site-content .form-row select:focus,
+.woocommerce-checkout .site-content .form-row select:focus,
+.woocommerce-cart .site-content .form-row textarea:focus {
     border-color: var(--bollu-gold) !important;
     outline: none !important;
+}
+
+/* WooCommerce Gutenberg Blocks Checkout & Cart inputs styling - Color/Border only, no padding overrides */
+.wc-block-components-text-input input,
+.wc-block-components-combobox input,
+.wc-block-components-textarea textarea,
+.wc-block-components-select select,
+.wc-block-components-checkout-step input,
+.wc-block-components-checkout-step select,
+.wc-block-components-checkout-step textarea {
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    color: var(--bollu-black) !important;
+    border-radius: 2px !important;
+    font-family: 'Inter', 'Tajawal', sans-serif !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.wc-block-components-text-input input:focus,
+.wc-block-components-combobox input:focus,
+.wc-block-components-textarea textarea:focus,
+.wc-block-components-select select:focus {
+    border-color: var(--bollu-gold) !important;
+    box-shadow: 0 0 0 1px var(--bollu-gold) !important;
+    outline: none !important;
+}
+
+/* Ensure WooCommerce Block floating labels are clearly readable and styled nicely */
+.wc-block-components-text-input label,
+.wc-block-components-combobox label,
+.wc-block-components-textarea label {
+    color: #777777 !important;
+    font-family: 'Outfit', 'Tajawal', sans-serif !important;
 }
 
 /* Classic Cart Table styling */

@@ -83,7 +83,7 @@
                     <span class="bollu-search-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </span>
-                    <input type="search" class="bollu-search-input" placeholder="Поиск по товарам..." value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" />
+                    <input type="search" class="bollu-search-input" placeholder="البحث عن المنتجات..." value="<?php echo get_search_query(); ?>" name="s" autocomplete="off" />
                     <input type="hidden" name="post_type" value="product" />
                 </form>
                 <button class="bollu-search-close" id="bolluSearchClose" aria-label="Close Search">

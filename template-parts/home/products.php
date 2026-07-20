@@ -34,12 +34,12 @@
                 $cat_name = ! empty( $terms ) ? $terms[0]->name : 'تحفة فنية';
                 ?>
                 <div class="product-card">
-                    <div class="product-card-image-wrap">
+                    <a href="<?php the_permalink(); ?>" class="product-card-image-wrap">
                         <div class="product-card-image" style="background-image: url('<?php echo esc_url( $image_url ); ?>');"></div>
                         <?php if ( $product->is_on_sale() ) : ?>
                             <span class="product-badge-sale">خصم مميز</span>
                         <?php endif; ?>
-                    </div>
+                    </a>
                     <div class="product-card-info">
                         <span class="product-card-category"><?php echo esc_html( $cat_name ); ?></span>
                         <h3 class="product-card-title">

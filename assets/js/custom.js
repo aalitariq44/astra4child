@@ -158,6 +158,26 @@
             $searchInput.val(''); // Optional: clear input on close
         }
 
+        // Make entire product card clickable
+        $(document).on('click', '.product-card, ul.products li.product', function(e) {
+            // If user clicked directly on an <a> link or interactive button, let standard behavior handle it
+            if ($(e.target).is('a, button, input, select') || $(e.target).closest('a, button, input, select').length > 0) {
+                return;
+            }
+
+            var $link = $(this).find('a[href]').first();
+            if ($link.length) {
+                var href = $link.attr('href');
+                if (href && href !== '#') {
+                    if (e.ctrlKey || e.metaKey || e.which === 2) {
+                        window.open(href, '_blank');
+                    } else {
+                        window.location.href = href;
+                    }
+                }
+            }
+        });
+
         // Run check on load and scroll
         $(window).on('scroll resize', checkScroll);
         setTimeout(checkScroll, 100);

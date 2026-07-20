@@ -375,16 +375,19 @@ body .main-header-menu a:hover {
     margin: 0 auto;
 }
 
-.product-card {
+.product-card,
+ul.products li.product {
     background-color: var(--bollu-card-bg);
     border: 1px solid var(--bollu-border);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-direction: column;
     height: 100%;
+    cursor: pointer;
 }
 
 .product-card-image-wrap {
+    display: block;
     position: relative;
     width: 100%;
     padding-top: 100%; /* 1:1 Aspect Ratio */

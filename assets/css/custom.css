@@ -2280,6 +2280,60 @@ body.bollu-search-open {
     color: var(--bollu-gold) !important;
 }
 
+/* WooCommerce Order Received / Thank You page styling overrides */
+body.woocommerce-order-received .site-content a:not(.button),
+body.woocommerce-checkout .site-content .woocommerce-order-details a:not(.button),
+body.woocommerce-checkout .site-content .woocommerce-thankyou-order-details a:not(.button) {
+    color: var(--bollu-gold) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+body.woocommerce-order-received .site-content a:not(.button):hover,
+body.woocommerce-checkout .site-content .woocommerce-order-details a:not(.button):hover,
+body.woocommerce-checkout .site-content .woocommerce-thankyou-order-details a:not(.button):hover {
+    color: var(--bollu-gold-hover) !important;
+}
+
+/* Specifically for table and order details product links, keep them black (gold on hover) to match the cart design */
+body.woocommerce-order-received #content table td a,
+body.woocommerce-checkout #content table td a,
+body.woocommerce-order-received #primary table td a,
+body.woocommerce-checkout #primary table td a,
+body.woocommerce-order-received .site-content table td a,
+body.woocommerce-checkout .site-content table td a,
+body.woocommerce-order-received .site-content .woocommerce-table td a,
+body.woocommerce-checkout .site-content .woocommerce-table td a,
+body.woocommerce-checkout .site-content .woocommerce-order-details td a,
+body.woocommerce-checkout .site-content .woocommerce-table--order-details td a,
+#content .woocommerce-order-details td a,
+#content .woocommerce-table--order-details td a,
+.woocommerce-order-details td a,
+.woocommerce-table--order-details td a {
+    color: var(--bollu-black) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+body.woocommerce-order-received #content table td a:hover,
+body.woocommerce-checkout #content table td a:hover,
+body.woocommerce-order-received #primary table td a:hover,
+body.woocommerce-checkout #primary table td a:hover,
+body.woocommerce-order-received .site-content table td a:hover,
+body.woocommerce-checkout .site-content table td a:hover,
+body.woocommerce-order-received .site-content .woocommerce-table td a:hover,
+body.woocommerce-checkout .site-content .woocommerce-table td a:hover,
+body.woocommerce-checkout .site-content .woocommerce-order-details td a:hover,
+body.woocommerce-checkout .site-content .woocommerce-table--order-details td a:hover,
+#content .woocommerce-order-details td a:hover,
+#content .woocommerce-table--order-details td a:hover,
+.woocommerce-order-details td a:hover,
+.woocommerce-table--order-details td a:hover {
+    color: var(--bollu-gold) !important;
+}
+
 /* ==========================================================================
    7. WooCommerce Gutenberg Blocks Styling Overrides (Luxury Bollu Style)
    ========================================================================== */
@@ -3366,6 +3420,23 @@ body.rtl .woocommerce-notice {
         flex-direction: column;
         gap: 30px;
     }
+}
+
+/* ==========================================================================
+   Global Price & Currency Symbol Alignment Unification (RTL Fix)
+   ========================================================================== */
+.woocommerce-Price-amount,
+.woocommerce-Price-amount *,
+.amount,
+.amount *,
+.price,
+.price *,
+p.price,
+p.price *,
+bdi,
+.woocommerce-Price-currencySymbol {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
 }
 
 

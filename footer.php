@@ -38,8 +38,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class="pre-footer-col">
 				<h3>صالة العرض</h3>
-				<p class="description">موسكو، بولشوي سافينسكي، 12، مبنى 8</p>
-				<p class="hours">الإثنين – الجمعة · 10:00 – 17:00 (بتوقيت موسكو)</p>
+				<p class="description">بغداد - الكرادة</p>
+				<p class="hours">الإثنين – الجمعة · 10:00 – 17:00 (بتوقيت بغداد)</p>
 			</div>
 		</div>
 	</div>

@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "footer.php": {
-    "mtime": 1784504073.463158,
-    "ast_hash": "fb5fda0be35d247b89d7540819aa48e4",
+    "mtime": 1784548729.486459,
+    "ast_hash": "7a405bb59fe1eab18fe73a93d9b3194a",
     "semantic_hash": ""
   },
   "front-page.php": {
@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "header.php": {
-    "mtime": 1784548011.6285818,
-    "ast_hash": "92415ee85b60889a84fae4a1b86b51d1",
+    "mtime": 1784548770.0772753,
+    "ast_hash": "453def79deffdd9572e8485664bdd4af",
     "semantic_hash": ""
   },
   "inc/footer-functions.php": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "screenshot.png": {
-    "mtime": 1783817564.7674224,
-    "ast_hash": "2c407cd2bfb9b6420cf9859b85c0f805",
+    "mtime": 1784548544.8215718,
+    "ast_hash": "b5cd1254f6e981614671defb36d14bc3",
     "semantic_hash": ""
   }
 }

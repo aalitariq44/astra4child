@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "header.php": {
-    "mtime": 1784548770.0772753,
-    "ast_hash": "453def79deffdd9572e8485664bdd4af",
+    "mtime": 1784550312.0363684,
+    "ast_hash": "11e43a5a9469ff577f7360bcb54ad46f",
     "semantic_hash": ""
   },
   "inc/footer-functions.php": {
@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "template-parts/header/main-header.php": {
-    "mtime": 1784548040.182538,
-    "ast_hash": "983cb6ef57a18dd6e77cb005802418a9",
+    "mtime": 1784550357.6692803,
+    "ast_hash": "84777ed956b0feff9505b6e4f92f5155",
     "semantic_hash": ""
   },
   "template-parts/home/categories.php": {

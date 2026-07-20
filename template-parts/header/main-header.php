@@ -11,16 +11,8 @@
     <!-- Sub-header (Top Navigation Bar) -->
     <div class="bollu-sub-header">
         <div class="bollu-sub-header-container">
-            <!-- Left side: Menu links (SHOP, SAMPLE PAGE...) -->
+            <!-- Left side: Menu links (Empty to match local design) -->
             <div class="bollu-sub-menu">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'primary-menu-sub',
-                    'container'      => false,
-                    'fallback_cb'    => 'astra_default_menu'
-                ) );
-                ?>
             </div>
             <!-- Right side: Contact Info -->
             <div class="bollu-sub-contact">
